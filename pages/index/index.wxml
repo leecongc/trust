@@ -1,0 +1,43 @@
+<scroll-view scroll-y="true">
+    <!-- 头部搜索框 -->
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class='header'>
+        <input type='text' class='header-inp' placeholder="请搜索相关信息"/>
+        <button formType="submit" size='mini' style='margin:12rpx;'>搜索</button>
+      </view>
+    </form>
+    <!-- 轮播图 -->
+    <swiper class='nav-img' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" style='width:100%;' />
+        </swiper-item>
+      </block>
+    </swiper> 
+    <!-- 主体功能介绍 -->
+    <view class='body'>
+      <view class='body-list'>
+          <view class='body-list-content'>1</view>
+          <view class='body-list-content'>2</view>
+      </view>
+      <view class='body-list'>
+          <view class='body-list-content'>1</view>
+          <view class='body-list-content'>2</view>
+      </view>
+      <view class='body-list'>
+          <view class='body-list-content'>1</view>
+          <view class='body-list-content'>2</view>
+      </view>
+    </view>
+    <!-- 最新资讯 -->
+    <view>
+      <view class='news-list-head'>
+        <image src='../../images/news-list.png'/>
+        <text>新闻资讯</text>
+      </view>
+      <view class='news-list-body'>
+          <view class='news-list-content'>1</view>
+          <view class='news-list-content'>1</view>
+      </view>
+    </view>
+</scroll-view>

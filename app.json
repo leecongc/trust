@@ -1,0 +1,41 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/news/news",
+    "pages/demo/demo",
+    "pages/about/about"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#388E8E",
+    "navigationBarTitleText": "信儿",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar":{
+      "color": "#000000",
+      "selectedColor": "#000000",
+      "list":[{
+        "pagePath":"pages/index/index",
+        "text":"主页",
+        "iconPath":"images/swiper/home.png",
+        "selectedIconPath":"images/swiper/home-sel.png"
+      },{
+        "pagePath": "pages/news/news",
+        "text": "动态",
+        "iconPath": "images/swiper/news.png",
+        "selectedIconPath": "images/swiper/news-sel.png"
+      },
+      {
+        "pagePath": "pages/demo/demo",
+        "text": "案例",
+        "iconPath": "images/swiper/demo.png",
+        "selectedIconPath": "images/swiper/demo-sel.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "关于",
+        "iconPath": "images/swiper/about.png",
+        "selectedIconPath": "images/swiper/about-sel.png"
+      }]
+  }
+}
