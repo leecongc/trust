@@ -9,5 +9,14 @@ Page({
     autoplay: true,      /*是否自动切换*/
     interval: 5000,       /*自动切换时间间隔*/
     duration: 1000        /*滑动动画时长*/
+  },
+  task:function(e){
+    console.log(e.currentTarget.id);
+    if (e.currentTarget.id =='demo'){
+      wx.switchTab({
+        url: '../demo/demo',
+      });  
+    }
+    
   }
 })

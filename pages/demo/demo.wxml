@@ -1,2 +1,19 @@
 <!--pages/demo/demo.wxml-->
-<text>pages/demo/demo.wxml</text>
+<scroll-view scroll-y="true">
+  <view class='body'>
+        <text>某某案例</text>
+        <image src='../../images/anli.png'/>
+  </view>
+  <view class='body'>
+        <text>某某案例</text>
+        <image src='../../images/anli.png'/>
+  </view>
+  <view class='body'>
+        <text>某某案例</text>
+        <image src='../../images/anli.png'/>
+  </view>
+  <view class='body'>
+        <text>某某案例</text>
+        <image src='../../images/anli.png'/>
+  </view>
+</scroll-view>

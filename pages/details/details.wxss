@@ -1,0 +1,39 @@
+/* pages/details/details.wxss */
+.body{
+  /* background-color: #ccc; */
+ 
+}
+.title{
+  /* background-color: red; */
+  border-bottom: 1px solid #4f4f4f;
+  padding: 10rpx 20rpx;
+  display: flex;
+  align-items: center;
+}
+.title image{
+  margin-right: 20rpx;
+  width: 70rpx;
+  height: 70rpx;
+}
+.title text{
+  font-size: 30rpx;
+}
+.content{
+  /* background-color: blue; */
+  color: #4f4f4f;
+  padding: 40rpx 20rpx;
+  font-size: 30rpx;
+  text-indent: 40rpx;
+  letter-spacing:6rpx;/*首行缩进*/
+  line-height:50rpx;
+}
+
+.foot{
+  overflow: hidden;
+}
+.foot text{
+  color: #008B8B;
+  float: right;
+  margin: 20rpx 40rpx;
+  font-size: 28rpx;
+}

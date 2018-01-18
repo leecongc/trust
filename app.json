@@ -1,9 +1,10 @@
 {
   "pages":[
-    "pages/index/index",
-    "pages/news/news",
     "pages/demo/demo",
-    "pages/about/about"
+    "pages/news/news",
+    "pages/index/index",
+    "pages/about/about",
+    "pages/details/details"
   ],
   "window":{
     "backgroundTextStyle":"light",

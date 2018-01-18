@@ -17,16 +17,34 @@
     <!-- 主体功能介绍 -->
     <view class='body'>
       <view class='body-list'>
-          <view class='body-list-content'>1</view>
-          <view class='body-list-content'>2</view>
+          <view class='body-list-content' bindtap="task" id='demo' hover-class='backchange' >
+            <image src='../../images/demo-logo.png' mode="aspectFit" />
+            <text>开发案例</text>
+          </view>
+          <view class='body-list-content' bindtap="task" id='marketing' hover-class='backchange'>
+            <image src='../../images/Marketing.png' mode="aspectFit" />
+            <text>微信营销</text>
+          </view>
       </view>
       <view class='body-list'>
-          <view class='body-list-content'>1</view>
-          <view class='body-list-content'>2</view>
+          <view class='body-list-content'>
+            <image src='../../images/science.png' mode="aspectFit" />
+            <text>信儿科技</text>
+          </view>
+          <view class='body-list-content'>
+            <image src='../../images/cooperation.png' mode="aspectFit" />
+            <text>加盟合作</text>
+          </view>
       </view>
       <view class='body-list'>
-          <view class='body-list-content'>1</view>
-          <view class='body-list-content'>2</view>
+          <view class='body-list-content'>
+            <image src='../../images/History.png' mode="aspectFit" />
+            <text>发展历史</text>
+          </view>
+          <view class='body-list-content'>
+            <image src='../../images/recruit.png' mode="aspectFit" />
+            <text>招兵买马</text>
+          </view>
       </view>
     </view>
     <!-- 最新资讯 -->
@@ -36,8 +54,26 @@
         <text>新闻资讯</text>
       </view>
       <view class='news-list-body'>
-          <view class='news-list-content'>1</view>
-          <view class='news-list-content'>1</view>
+          <view class='news-list-content'>
+            <text class='title'>我是内容</text>
+            <text class='timedata'>2018/01/01</text>
+          </view>
+          <view class='news-list-content'>
+            <text class='title'>我是内容</text>
+            <text class='timedata'>2018/01/01</text>
+          </view>
+          <view class='news-list-content'>
+            <text class='title'>我是内容</text>
+            <text class='timedata'>2018/01/01</text>
+          </view>
+          <view class='news-list-content'>
+            <text class='title'>我是内容</text>
+            <text class='timedata'>2018/01/01</text>
+          </view>
+          <view class='news-list-content'>
+            <text class='title'>我是内容</text>
+            <text class='timedata'>2018/01/01</text>
+          </view>
       </view>
     </view>
 </scroll-view>

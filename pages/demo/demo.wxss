@@ -1,1 +1,28 @@
 /* pages/demo/demo.wxss */
+.body{
+  /* background-image:-webkit-gradient(linear,left top,right top,from(#96CDCD),to(#EEE8CD)); */
+  /* border-top: 4px solid #66CDAA;  */
+  /* box-shadow: 0px 3px 4px #AAAAAA;  */
+  border: 1px solid #DEDEDE;
+  border-radius: 8rpx;
+  overflow: hidden;
+  height: 180rpx;
+  align-items: conter;
+  line-height: 180rpx;
+  margin: 10rpx 4rpx;
+}
+.body image{
+  /* background-color: white; */
+  margin: 10rpx;
+  float: right;
+  width: 160rpx;
+  height: 160rpx;
+}
+.body text{
+  font-weight: bold; 
+  text-indent: 80rpx;
+  color: #66CDAA;
+  margin-left: 40rpx;
+  
+   /* display: block;  */
+}
