@@ -1,6 +1,6 @@
 <!--pages/demo/demo.wxml-->
 <scroll-view scroll-y="true">
-  <view class='body'>
+  <view class='body' hover-class='backchange'>
         <text>某某案例</text>
         <image src='../../images/anli.png'/>
   </view>

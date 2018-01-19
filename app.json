@@ -33,7 +33,7 @@
         "selectedIconPath": "images/swiper/demo-sel.png"
       },
       {
-        "pagePath": "pages/about/about",
+        "pagePath": "pages/details/details",
         "text": "关于",
         "iconPath": "images/swiper/about.png",
         "selectedIconPath": "images/swiper/about-sel.png"

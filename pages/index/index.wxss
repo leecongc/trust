@@ -39,9 +39,7 @@
   display: flex;
   align-items: center;
 }
-.backchange{
-  background-color: #E0EEEE;
-}
+
 .body-list-content image{
   margin: 0 40rpx;
   width: 80rpx;
