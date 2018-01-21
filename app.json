@@ -1,8 +1,8 @@
 {
   "pages":[
+    "pages/index/index",
     "pages/demo/demo",
     "pages/news/news",
-    "pages/index/index",
     "pages/about/about",
     "pages/details/details"
   ],
@@ -33,7 +33,7 @@
         "selectedIconPath": "images/swiper/demo-sel.png"
       },
       {
-        "pagePath": "pages/details/details",
+        "pagePath": "pages/about/about",
         "text": "关于",
         "iconPath": "images/swiper/about.png",
         "selectedIconPath": "images/swiper/about-sel.png"

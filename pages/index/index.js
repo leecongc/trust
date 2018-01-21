@@ -10,12 +10,37 @@ Page({
     interval: 5000,       /*自动切换时间间隔*/
     duration: 1000        /*滑动动画时长*/
   },
-  task:function(e){
-    console.log(e.currentTarget.id);
+  requt_data:function(e){
+    // console.log(e.currentTarget.id);
     if (e.currentTarget.id =='demo'){
       wx.switchTab({
         url: '../demo/demo',
       });  
+    } else if (e.currentTarget.id == 'marketing'){
+      console.log('微信营销');
+      wx.navigateTo({
+        url: '../details/details?class=' + e.currentTarget.id
+      })
+    } else if (e.currentTarget.id == 'science') {
+      console.log('信儿科技');
+      wx.navigateTo({
+        url: '../details/details?class=' + e.currentTarget.id
+      });
+    } else if (e.currentTarget.id == 'cooperation') {
+      console.log('加盟合作');
+      wx.navigateTo({
+        url: '../details/details?class=' + e.currentTarget.id
+      });
+    } else if (e.currentTarget.id == 'process') {
+      console.log('发展历史');
+      wx.navigateTo({
+        url: '../details/details?class=' + e.currentTarget.id
+      });
+    } else if (e.currentTarget.id == 'recruit') {
+      console.log('招兵买马');
+      wx.navigateTo({
+        url: '../details/details?class=' + e.currentTarget.id
+      });
     }
     
   }

@@ -3,13 +3,14 @@
   <view class='body'>
       <view class='title'>
           <image src='../../images/logo.png' mode="aspectFit" />
-          <text>信儿工作室</text>
+          <!-- <text>信儿工作室</text> -->
+          <text>{{user}}</text>
       </view>
       <view class='content'>
-          事发后开始放缓刷卡缴费和深刻理解速记符号刷卡积分森快捷回复刷卡积分思考的缴费和刷卡缴费和圣诞节思考的房价三地警方思考是
+          {{content}}
       </view>
       <view class='foot'>
-        <text>2018/01/01</text>
+        <text>{{date}}</text>
       </view>
   </view>
 </scroll-view>

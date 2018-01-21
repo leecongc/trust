@@ -17,31 +17,31 @@
     <!-- 主体功能介绍 -->
     <view class='body'>
       <view class='body-list'>
-          <view class='body-list-content' bindtap="task" id='demo' hover-class='backchange' >
+          <view class='body-list-content' bindtap="requt_data" id='demo' hover-class='backchange' >
             <image src='../../images/demo-logo.png' mode="aspectFit" />
             <text>开发案例</text>
           </view>
-          <view class='body-list-content' bindtap="task" id='marketing' hover-class='backchange'>
+          <view class='body-list-content' bindtap="requt_data" id='marketing' hover-class='backchange'>
             <image src='../../images/Marketing.png' mode="aspectFit" />
             <text>微信营销</text>
           </view>
       </view>
       <view class='body-list'>
-          <view class='body-list-content'>
+          <view class='body-list-content' bindtap="requt_data" id='science' hover-class='backchange'>
             <image src='../../images/science.png' mode="aspectFit" />
             <text>信儿科技</text>
           </view>
-          <view class='body-list-content'>
+          <view class='body-list-content' bindtap="requt_data" id='cooperation' hover-class='backchange'>
             <image src='../../images/cooperation.png' mode="aspectFit" />
             <text>加盟合作</text>
           </view>
       </view>
       <view class='body-list'>
-          <view class='body-list-content'>
+          <view class='body-list-content' bindtap="requt_data" id='process' hover-class='backchange'>
             <image src='../../images/History.png' mode="aspectFit" />
             <text>发展历史</text>
           </view>
-          <view class='body-list-content'>
+          <view class='body-list-content' bindtap="requt_data" id='recruit' hover-class='backchange'>
             <image src='../../images/recruit.png' mode="aspectFit" />
             <text>招兵买马</text>
           </view>
