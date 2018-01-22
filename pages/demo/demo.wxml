@@ -1,19 +1,7 @@
 <!--pages/demo/demo.wxml-->
-<scroll-view scroll-y="true">
-  <view class='body' hover-class='backchange'>
-        <text>某某案例</text>
-        <image src='../../images/anli.png'/>
-  </view>
-  <view class='body'>
-        <text>某某案例</text>
-        <image src='../../images/anli.png'/>
-  </view>
-  <view class='body'>
-        <text>某某案例</text>
-        <image src='../../images/anli.png'/>
-  </view>
-  <view class='body'>
-        <text>某某案例</text>
+<scroll-view scroll-y="true" wx:for="{{demos}}">
+  <view class='body' hover-class='backchange' id='{{item.id}}' bindtap='details'>
+        <text>{{item.article_name}}</text>
         <image src='../../images/anli.png'/>
   </view>
 </scroll-view>

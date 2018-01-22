@@ -5,14 +5,39 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    about:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var that = this;
+    wx.showToast({
+      title: '加载中',
+      icon: 'loading',
+      duration: 5000
+    })
+    wx.request({
+      url: 'http://www.ceshi.com/Trust/index.php/WeApi/index_about',
+      data: { art_class: 'show' },
+      method: 'GET',
+      header: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      success: function (res) {
+        if (res.statusCode == 200) {
+          wx.hideToast();
+          var data = res.data.data;
+          that.setData({
+            user: data.article_user,
+            content: data.article_content,
+            date: data.article_date,
+          })
+        }
+        console.log(res)
+      }
+    })
   },
 
   /**

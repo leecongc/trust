@@ -1,2 +1,16 @@
-<!--pages/about/about.wxml-->
-<text>pages/about/about.wxml</text>
+<!--pages/details/details.wxml-->
+<scroll-view scroll-y="true">
+  <view class='body'>
+      <view class='title'>
+          <image src='../../images/logo.png' mode="aspectFit" />
+          <!-- <text>信儿工作室</text> -->
+          <text>{{user}}</text>
+      </view>
+      <view class='content'>
+          {{content}}
+      </view>
+      <view class='foot'>
+        <text>{{date}}</text>
+      </view>
+  </view>
+</scroll-view>

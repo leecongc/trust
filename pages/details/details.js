@@ -5,11 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    user:'',
-    content:'',
-    date:''
   },
-
+  
   /**
    * 生命周期函数--监听页面加载
    */
@@ -25,9 +22,29 @@ Page({
       title: options.class
     })
     */
+
+    /*
+      判断请求数据的类型
+    */
+    if (options.class){
+      /*获取首页文章*/
+      var urls = 'http://www.ceshi.com/Trust/index.php/WeApi/index';
+      var datas = options.class;
+    } else if (options.news_id){
+      /*查看单独的某一条动态*/
+      var urls = 'http://www.ceshi.com/Trust/index.php/WeApi/index_trdnes';
+      var datas = options.news_id;
+    } else if (options.demo) {
+      /*查看单独的某一条案例*/
+      var urls = 'http://www.ceshi.com/Trust/index.php/WeApi/index_demo';
+      var datas = options.demo;
+    } else if (options.about){
+      var urls = 'http://www.ceshi.com/Trust/index.php/WeApi/index_about';
+      var datas = 'show';
+    }
     wx.request({
-      url: 'http://www.ceshi.com/Trust/index.php/WeApi/index',
-      data: { art_class: options.class},
+      url: urls,
+      data: { art_class:datas},
       method: 'POST',
       header: {
         'Content-Type': 'application/x-www-form-urlencoded'

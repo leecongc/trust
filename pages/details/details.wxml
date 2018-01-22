@@ -7,7 +7,8 @@
           <text>{{user}}</text>
       </view>
       <view class='content'>
-          {{content}}
+           {{content}} 
+          <!-- {{datass}} -->
       </view>
       <view class='foot'>
         <text>{{date}}</text>

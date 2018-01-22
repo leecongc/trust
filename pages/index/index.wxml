@@ -53,26 +53,10 @@
         <image src='../../images/news-list.png'/>
         <text>新闻资讯</text>
       </view>
-      <view class='news-list-body'>
-          <view class='news-list-content'>
-            <text class='title'>我是内容</text>
-            <text class='timedata'>2018/01/01</text>
-          </view>
-          <view class='news-list-content'>
-            <text class='title'>我是内容</text>
-            <text class='timedata'>2018/01/01</text>
-          </view>
-          <view class='news-list-content'>
-            <text class='title'>我是内容</text>
-            <text class='timedata'>2018/01/01</text>
-          </view>
-          <view class='news-list-content'>
-            <text class='title'>我是内容</text>
-            <text class='timedata'>2018/01/01</text>
-          </view>
-          <view class='news-list-content'>
-            <text class='title'>我是内容</text>
-            <text class='timedata'>2018/01/01</text>
+      <view class='news-list-body' wx:for="{{trdnes}}">
+          <view class='news-list-content' bindtap="requt_data" id='{{item.id}}'>
+            <text class='title'>{{item.article_name}}</text>
+            <text class='timedata'>{{item.article_date}}</text>
           </view>
       </view>
     </view>

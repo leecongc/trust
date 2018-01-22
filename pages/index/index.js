@@ -8,7 +8,37 @@ Page({
     indicatorDots: true, /*是否显示面板指示点*/
     autoplay: true,      /*是否自动切换*/
     interval: 5000,       /*自动切换时间间隔*/
-    duration: 1000        /*滑动动画时长*/
+    duration: 1000,        /*滑动动画时长*/
+    trdnes:[]
+  },
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    var that = this;
+    wx.showToast({
+      title: '加载中',
+      icon: 'loading',
+      duration: 5000
+    })
+    wx.request({
+      url: 'http://www.ceshi.com/Trust/index.php/WeApi/index_trdnes',
+      data: {art_class:'获取5条动态'},
+      method: 'GET',
+      header: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      success: function (res) {
+        if (res.statusCode == 200) {
+          wx.hideToast();
+          var data = res.data.data;
+          that.setData({
+            trdnes: data
+          })
+        }
+        console.log(res)
+      }
+    })
   },
   requt_data:function(e){
     // console.log(e.currentTarget.id);
@@ -41,7 +71,13 @@ Page({
       wx.navigateTo({
         url: '../details/details?class=' + e.currentTarget.id
       });
+    } else {
+      console.log('查看动态');
+      wx.navigateTo({
+        url: '../details/details?news_id=' + e.currentTarget.id
+      });
     }
+
     
   }
 })

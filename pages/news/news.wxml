@@ -1,14 +1,14 @@
 <!--pages/news/news.wxml-->
 <!-- <text>pages/news/news.wxml</text> -->
-<scroll-view scroll-y="true">
-  <view class='body' bindtap='details'>
+<scroll-view scroll-y="true" wx:for="{{trdnes}}">
+  <view class='body' bindtap='details' id="{{item.id}}" >
     <view class='header'>
         <image src='../../images/logo.png' mode="aspectFit" /><!--logo -->
-        <text>2018</text><!-- 日期 -->
+        <text>{{item.article_date}}</text><!-- 日期 -->
     </view>
     <view class='min'>
-      <text class='title'>我是标题</text>  <!-- 标题 -->
-      <text class='content'>我是内容阿斯达四大大撒旦阿萨德艾端我是内容阿斯达四大大撒旦阿萨德艾端我是内容阿斯达四大大撒旦阿萨德艾端...</text>  <!-- 内容 -->
+      <text class='title'>{{item.article_name}}</text>  <!-- 标题 -->
+      <text class='content'>{{item.article_content}}</text>  <!-- 内容 -->
     </view>
     <view class='foot'>
       <text>>>查看详情</text> <!--  查看详情 -->
