@@ -1,3 +1,4 @@
+@import "/wxParse/wxParse.wxss";
 .backchange{
   background-color: #E0EEEE;
 }

@@ -1,4 +1,5 @@
 <!--pages/details/details.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
 <scroll-view scroll-y="true">
   <view class='body'>
       <view class='title'>
@@ -6,10 +7,11 @@
           <!-- <text>信儿工作室</text> -->
           <text>{{user}}</text>
       </view>
-      <view class='content'>
-           {{content}} 
-          <!-- {{datass}} -->
-      </view>
+       <view class='content'> 
+          <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+           <!-- {{content}}  -->
+           <!-- {{datass}}  -->
+       </view> 
       <view class='foot'>
         <text>{{date}}</text>
       </view>

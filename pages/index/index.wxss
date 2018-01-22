@@ -54,23 +54,26 @@
 
 /*新闻列表*/
 .news-list-head{
-  margin: 20rpx 14rpx;  
+  /* margin: 20rpx 14rpx;   */
   padding: 10rpx 0;  
   border-bottom: 2px solid #B0E0E6;
   height: 60rpx;
+  display: flex;
   flex: 1;
+  align-items: center;
 }
 .news-list-head image{
+  margin-right: 20rpx;
   width:60rpx;
   height:60rpx;
 }
 /*新闻列表内容*/
 .news-list-content{
   color: #8F8F8F;
-  height: 60rpx;
-  font-size: 26rpx;
+  height: 80rpx;
+  font-size: 30rpx;
   border-bottom: 1px solid #ccc;
-  line-height: 60rpx;
+  line-height: 80rpx;
 }
 .title {
   margin-left: 20rpx;

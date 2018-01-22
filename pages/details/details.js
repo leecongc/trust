@@ -1,10 +1,12 @@
 // pages/details/details.js
+var WxParse = require('../../wxParse/wxParse.js');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    content:''
   },
   
   /**
@@ -28,18 +30,18 @@ Page({
     */
     if (options.class){
       /*获取首页文章*/
-      var urls = 'http://www.ceshi.com/Trust/index.php/WeApi/index';
+      var urls = getApp().data.APP_PATH +'WeApi/index';
       var datas = options.class;
     } else if (options.news_id){
       /*查看单独的某一条动态*/
-      var urls = 'http://www.ceshi.com/Trust/index.php/WeApi/index_trdnes';
+      var urls = getApp().data.APP_PATH +'WeApi/index_trdnes';
       var datas = options.news_id;
     } else if (options.demo) {
       /*查看单独的某一条案例*/
-      var urls = 'http://www.ceshi.com/Trust/index.php/WeApi/index_demo';
+      var urls = getApp().data.APP_PATH +'WeApi/index_demo';
       var datas = options.demo;
     } else if (options.about){
-      var urls = 'http://www.ceshi.com/Trust/index.php/WeApi/index_about';
+      var urls = getApp().data.APP_PATH +'WeApi/index_about';
       var datas = 'show';
     }
     wx.request({
@@ -55,9 +57,9 @@ Page({
           var data=res.data.data;
           that.setData({
             user:data.article_user,
-            content: data.article_content,
             date: data.article_date,
           })
+          WxParse.wxParse('content', 'html', data.article_content, that,30);
         }
         console.log(res)
       }

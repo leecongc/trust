@@ -22,7 +22,7 @@ Page({
       duration: 5000
     })
     wx.request({
-      url: 'http://www.ceshi.com/Trust/index.php/WeApi/index_trdnes',
+      url: getApp().data.APP_PATH +'WeApi/index_trdnes',
       data: {art_class:'获取5条动态'},
       method: 'GET',
       header: {

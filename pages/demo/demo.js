@@ -19,7 +19,7 @@ Page({
       duration: 5000
     })
     wx.request({
-      url: 'http://www.ceshi.com/Trust/index.php/WeApi/index_demo',
+      url: getApp().data.APP_PATH +'WeApi/index_demo',
       data: { art_class: '获取所有案例' },
       method: 'GET',
       header: {
