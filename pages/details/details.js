@@ -17,7 +17,7 @@ Page({
     wx.showToast({
       title: '加载中',
       icon: 'loading',
-      duration: 5000
+      duration: 8000
     })
     /*页面传参，获取上个页面url中的值
     this.setData({
@@ -43,6 +43,10 @@ Page({
     } else if (options.about){
       var urls = getApp().data.APP_PATH +'WeApi/index_about';
       var datas = 'show';
+    } else if (options.sel_news) {
+      /*表单提交，查询动态*/
+      var urls = getApp().data.APP_PATH + 'WeApi/sel_news';
+      var datas = options.sel_news;
     }
     wx.request({
       url: urls,
@@ -54,64 +58,36 @@ Page({
       success:function(res){
         if(res.statusCode==200){
           wx.hideToast();
-          var data=res.data.data;
-          that.setData({
-            user:data.article_user,
-            date: data.article_date,
-          })
-          WxParse.wxParse('content', 'html', data.article_content, that,30);
+          console.log(res);
+          if (res.data != -1 && res.data != -2){
+            var data = res.data.data;
+            that.setData({
+              user: data.article_user,
+              date: data.article_date,
+              title: data.article_name,
+            })
+            WxParse.wxParse('content', 'html', data.article_content, that, 30);
+          }else{
+            wx.showToast({
+              title: '加载失败',
+              icon: 'none',
+              duration: 2500
+            })
+          }
+          
         }
-        console.log(res)
+        
+      }, 
+      fail: function (err) {
+        console.log(err)
+        wx.showToast({
+          title: '加载失败，请重新加载',
+          icon: 'none',
+          duration: 2500
+        })
       }
     })
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-    
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
   
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  }
 })

@@ -14,6 +14,7 @@
   height: 70rpx;
 }
 .title text{
+  font-weight: bold;
   font-size: 30rpx;
 }
 .content{
@@ -24,6 +25,13 @@
   text-indent: 40rpx;
   letter-spacing:6rpx;/*首行缩进*/
   line-height:50rpx;
+}
+.art_title{
+  display: block;
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #4A708B;
+  margin-bottom: 20rpx;
 }
 
 .foot{

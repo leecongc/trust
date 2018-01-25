@@ -18,6 +18,7 @@
 /*轮播图*/
  .nav-img{
   margin-top: 10rpx;
+  height: 400rpx;
 } 
 /*主体区域*/
 .body{
@@ -62,6 +63,9 @@
   flex: 1;
   align-items: center;
 }
+.news-list-head text{
+  font-weight: bold;
+}
 .news-list-head image{
   margin-right: 20rpx;
   width:60rpx;
@@ -69,11 +73,11 @@
 }
 /*新闻列表内容*/
 .news-list-content{
-  color: #8F8F8F;
-  height: 80rpx;
-  font-size: 30rpx;
+  color: #363636;
+  height: 100rpx;
+  font-size: 32rpx;
   border-bottom: 1px solid #ccc;
-  line-height: 80rpx;
+  line-height: 100rpx;
 }
 .title {
   margin-left: 20rpx;

@@ -1,9 +1,7 @@
 Page({
   data: {
     imgUrls: [
-      'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
+      'http://www.cnerstudio.com/cnercms/twcms/view/cner_green/applet/images/avatar/zm2.jpg'
     ],
     indicatorDots: true, /*是否显示面板指示点*/
     autoplay: true,      /*是否自动切换*/
@@ -35,11 +33,19 @@ Page({
           that.setData({
             trdnes: data
           })
+        }else{
+          wx.hideToast();
+          wx.showToast({
+            title: '加载失败',
+            icon: 'none',
+            duration: 2500
+          })
         }
         console.log(res)
       }
     })
   },
+
   requt_data:function(e){
     // console.log(e.currentTarget.id);
     if (e.currentTarget.id =='demo'){
@@ -77,7 +83,47 @@ Page({
         url: '../details/details?news_id=' + e.currentTarget.id
       });
     }
-
-    
+  },
+  onPullDownRefresh: function (){
+    var that = this;
+    wx.showToast({
+      title: '加载中',
+      icon: 'loading',
+      duration: 5000
+    })
+    wx.request({
+      url: getApp().data.APP_PATH + 'WeApi/index_trdnes',
+      data: { art_class: '获取5条动态' },
+      method: 'GET',
+      header: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      success: function (res) {
+        if (res.statusCode == 200) {
+          wx.hideToast();
+          var data = res.data.data;
+          that.setData({
+            trdnes: data
+          });
+          wx.stopPullDownRefresh();
+        } else {
+          wx.hideToast();
+          wx.showToast({
+            title: '加载失败',
+            icon: 'none',
+            duration: 2500
+          })
+        }
+        console.log(res)
+      }
+    })
+  },
+  formSubmit: function (e) {
+    if(e.detail.value.sel!=''){
+      console.log('搜索动态');
+      wx.navigateTo({
+        url: '../details/details?sel_news=' + e.detail.value.sel
+      });
+    }
   }
 })

@@ -8,6 +8,7 @@
           <text>{{user}}</text>
       </view>
        <view class='content'> 
+          <text class='art_title'>{{title}}</text>
           <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
            <!-- {{content}}  -->
            <!-- {{datass}}  -->

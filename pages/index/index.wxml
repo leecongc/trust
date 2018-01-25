@@ -2,7 +2,7 @@
     <!-- 头部搜索框 -->
     <form bindsubmit="formSubmit" bindreset="formReset">
       <view class='header'>
-        <input type='text' class='header-inp' placeholder="请搜索相关信息"/>
+        <input type='text' class='header-inp' name="sel" placeholder="搜索最新动态"/>
         <button formType="submit" size='mini' style='margin:12rpx;'>搜索</button>
       </view>
     </form>
@@ -10,7 +10,7 @@
     <swiper class='nav-img' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
       <block wx:for="{{imgUrls}}">
         <swiper-item>
-          <image src="{{item}}" style='width:100%;' />
+          <image src="{{item}}" style='width:100%;height:100%;' />
         </swiper-item>
       </block>
     </swiper> 
@@ -51,7 +51,7 @@
     <view>
       <view class='news-list-head'>
         <image src='../../images/news-list.png'/>
-        <text>新闻资讯</text>
+        <text>头条资讯</text>
       </view>
       <view class='news-list-body' wx:for="{{trdnes}}">
           <view class='news-list-content' bindtap="requt_data" id='{{item.id}}'>

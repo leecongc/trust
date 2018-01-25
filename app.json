@@ -6,9 +6,10 @@
     "pages/about/about",
     "pages/details/details"
   ],
+  
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#388E8E",
+    "navigationBarBackgroundColor": "#01939a",
     "navigationBarTitleText": "信儿",
     "navigationBarTextStyle":"white"
   },

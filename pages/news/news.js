@@ -31,6 +31,13 @@ Page({
           that.setData({
             trdnes: data
           })
+        } else {
+          wx.hideToast();
+          wx.showToast({
+            title: '加载失败',
+            icon: 'none',
+            duration: 2500
+          })
         }
         console.log(res)
       }
