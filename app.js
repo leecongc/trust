@@ -5,7 +5,7 @@ App({
    */
   data: {
     /*全局url*/
-    APP_PATH: 'http://cnereate.xyz/cner/mc/trust/index.php/'
+    APP_PATH: 'https://www.cnereate.xyz/cner/mc/trust/index.php/'
   }
   
 })
